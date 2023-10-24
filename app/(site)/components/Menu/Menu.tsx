@@ -9,7 +9,6 @@ export const Menu = async (): Promise<JSX.Element> => {
  const menu: MenuItem[][] = [];
  for (const m of firstLevelMenu) {
   const res = await getMenu(m.id);
-  console.log(res);
   menu.push(res);
  }
 

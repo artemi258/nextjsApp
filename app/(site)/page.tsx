@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Button, Htag, P, Tag } from '../../components';
 import Rating from '../../components/Rating/Rating';
 import { getMenu } from '@/helpers/requests';
+import { Input } from '@/components/Input/Input';
 
 export default async function Home(): Promise<JSX.Element> {
  //  const [rating, setRating] = useState<number>(4);
@@ -36,6 +37,7 @@ export default async function Home(): Promise<JSX.Element> {
    <Tag>Ghost</Tag>
    <Tag color='primary'>Primary</Tag>
    {/* <Rating isEditable rating={rating} setRating={setRating} /> */}
+   <Input placeholder='тест' />
   </main>
  );
 }
