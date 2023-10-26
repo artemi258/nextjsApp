@@ -3,7 +3,7 @@
 import { getMenu, getPage, getProducts } from '@/helpers/requests';
 import { firstLevelMenu } from '@/helpers/helpers';
 import { ProductModel } from '@/interfaces/product.interface';
-import { Advantages, Card, HhData, Htag, P, Sort, Tag } from '@/components';
+import { Advantages, Card, HhData, Htag, P, Product, Sort, Tag } from '@/components';
 import styles from './page.module.scss';
 import { SortEnum } from '@/components/Sort/Sort.props';
 import { useParams } from 'next/navigation';
@@ -53,7 +53,7 @@ const PageProducts = (): JSX.Element => {
     )}
     <Sort sort={sort} setSort={setSort} /> <span>Сортировка</span>
    </div>
-   <div>{sortedProducts && sortedProducts.map((p) => <div key={p._id}>{p.title}</div>)}</div>
+   <div>{sortedProducts && sortedProducts.map((p) => <Product key={p._id} product={p} />)}</div>
    <div className={styles.hhTitle}>
     <Htag tag='h2'>Вакансии - {page?.category}</Htag>
     <Tag color='red' size='m'>
