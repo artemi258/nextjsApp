@@ -20,7 +20,6 @@ const PageProducts = (): JSX.Element => {
   products,
   sort: SortEnum.Rating,
  });
- //  console.log(sortedProducts);
  const setSort = (sort: SortEnum) => {
   dispathSort({ type: sort, payload: products });
  };
