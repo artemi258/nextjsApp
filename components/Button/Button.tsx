@@ -1,5 +1,6 @@
 'use client';
 
+import { motion } from 'framer-motion';
 import styles from './Button.module.scss';
 import { IButtonProps } from './Button.props';
 import ArrowIcon from './arrow.svg';
@@ -13,7 +14,8 @@ export const Button = ({
  ...props
 }: IButtonProps): JSX.Element => {
  return (
-  <button
+  <motion.button
+   whileHover={{ scale: 1.05 }}
    onClick={(): void => console.log('hello')}
    className={cn(styles.button, className, styles[appearance])}
    {...props}>
@@ -23,6 +25,6 @@ export const Button = ({
      <ArrowIcon />
     </span>
    )}
-  </button>
+  </motion.button>
  );
 };

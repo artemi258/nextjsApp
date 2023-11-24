@@ -1,7 +1,7 @@
 import '@/public/style/globals.scss';
 import styles from './layout.module.scss';
 import type { Metadata } from 'next';
-import { Footer, Header, Sidebar } from './components';
+import { Footer, Header, Sidebar } from '../components';
 
 export const metadata: Metadata = {
  title: 'Create Next App',
@@ -9,15 +9,11 @@ export const metadata: Metadata = {
 };
 export default function RootLayout({ children }: { children: React.ReactNode }): JSX.Element {
  return (
-  <html lang='ru'>
-   <head></head>
-   <body>
-    <div className={styles.wrapper}>
-     <Sidebar className={styles.sidebar} />
-     <div className={styles.body}>{children}</div>
-     <Footer className={styles.footer} />
-    </div>
-   </body>
-  </html>
+  <div className={styles.wrapper}>
+   <Header className={styles.header}>
+    <Sidebar />
+   </Header>
+   <div className={styles.body}>{children}</div>
+  </div>
  );
 }

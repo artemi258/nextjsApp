@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { Button, Htag, P, Tag } from '../../components';
-import Rating from '../../components/Rating/Rating';
 import { getMenu } from '@/helpers/requests';
 import { Input } from '@/components/Input/Input';
 
