@@ -3,6 +3,7 @@ export interface IReviewForm {
  title: string;
  description: string;
  rating: number;
+ checkbox: boolean;
 }
 export interface IReviewSentResponse {
  message: string;
